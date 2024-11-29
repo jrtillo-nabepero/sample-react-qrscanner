@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const LandingPage = ({ onProceed }) => {
-    const [inputValue, setInputValue] = useState(sessionStorage.getItem("group_token"));
+    const [inputValue, setInputValue] = useState(sessionStorage.getItem("group_token") ?? '');
     const [error, setError] = useState('');
 
     const handleInputChange = (e) => {
